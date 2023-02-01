@@ -6,18 +6,20 @@ const weatherContainer = document.querySelector('.weather__container');
 const form = document.querySelector('#form');
 const input = document.querySelector('#inputCity');
 
+let cityName = 'Moscow';
 //!!!вывод дефолтной карточки
-fillWeatherCard('Moscow');
+fillWeatherCard();
 
 //!!!обработка события отправки формы
 form.onsubmit = function (event) {
   event.preventDefault();
-  fillWeatherCard(input.value.trim());
+  cityName = input.value.trim();
+  fillWeatherCard();
 };
 
-async function fillWeatherCard(cityName) {
+async function fillWeatherCard() {
   //!!!получение json из wether api
-  const jsonData = await getWeatherApi(cityName);
+  const jsonData = await getWeatherApi();
   // console.log(jsonData);
   //!!!удаление старой карточки
   weatherContainer.remove();
@@ -34,7 +36,7 @@ async function fillWeatherCard(cityName) {
                     </div>`;
 }
 
-async function getWeatherApi(cityName) {
+async function getWeatherApi() {
   //запрос api
   const respone = await fetch(
     `http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${cityName}`
