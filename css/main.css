@@ -1,0 +1,115 @@
+@import url('./reset.css');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap');
+
+body {
+  font-family: 'Rubik', sans-serif;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 40px 15px 40px;
+  background: linear-gradient(180deg, #001253 0%, #00428f 100%);
+  margin-bottom: 40px;
+}
+
+.header h1 {
+  color: #fff;
+  font-weight: 700;
+  font-size: 40px;
+  margin-bottom: 23px;
+}
+
+.header form {
+  display: flex;
+  background-color: #fff;
+  height: 50px;
+  border-radius: 6px;
+}
+
+.header button {
+  background: #00b407;
+  border-radius: 0px 6px 6px 0px;
+  width: 119px;
+  font-size: 16px;
+  color: #fff;
+}
+
+.header button:hover {
+  background: #19ca1f;
+}
+
+.header button:active {
+  background: #158000;
+}
+
+.header input {
+  background-color: #fff;
+  font-size: 24px;
+  border-radius: 6px 0px 0px 6px;
+  width: 375px;
+  padding-left: 15px;
+  padding-right: 10px;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  min-height: calc(100vh - 280px);
+  padding-bottom: 40px;
+}
+.weather__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  padding: 25px 21px 25px 21px;
+  width: 400px;
+  height: 250px;
+  box-shadow: 4px 4px 20px rgba(1, 19, 84, 0.25);
+  border-radius: 8px;
+}
+
+.weather__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.weather__img {
+  max-width: 170px;
+}
+
+.span__city {
+  font-size: 30px;
+  font-weight: 700;
+}
+.span__temperature {
+  line-height: 0.8;
+  font-size: 80px;
+}
+
+.units {
+  font-size: 50px;
+}
+
+.span__weather {
+  margin-top: 10px;
+  font-size: 30px;
+  line-height: 1;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  height: 40px;
+  padding: 11px;
+  background: linear-gradient(0deg, #001253 0%, #00428f 100%);
+}
+
+.footer a {
+  text-decoration: none;
+  color: #fff;
+}
