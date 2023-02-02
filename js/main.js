@@ -20,6 +20,7 @@ form.onsubmit = function (event) {
 };
 
 async function fillWeatherCard() {
+  main.innerHTML = '<div class="weather__container">Loading...</div>';
   //!!! получение json из wether api
   const jsonWeatherData = await getWeatherApi();
   //!!! получение json словаря с кондициями погоды
@@ -70,7 +71,7 @@ async function getConditionsDictonary() {
 
 function drawWeatherCard(weatherObject) {
   //!!! удаление старой карточки
-  weatherContainer.remove();
+  //weatherContainer.remove();
   //!!! добавление новой карточки с разметкро и данными из api
   main.innerHTML = `<div class="weather__container">
                         <span class="span__city">${weatherObject.locationName}</span>
